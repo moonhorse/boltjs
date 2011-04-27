@@ -105,14 +105,14 @@ require('javelin/core').createClass({
 
 This means that whenever you call 
 {% highlight javascript %}
-myView.setClassName('myCssClass')
+  myView.setClassName('myCssClass')
 {% endhighlight %}
 
 , internally it executes
 
 {% highlight javascript %}
   this.getNode().className = 'myCssClass';
-{% endhighlight%}i
+{% endhighlight%}
 
 <h2>More Complex Delegation</h2>
 <p>
