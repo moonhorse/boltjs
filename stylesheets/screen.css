@@ -19,3 +19,8 @@
   top: 100px;
   left: 10px;
 }
+
+#pagenav li {
+  list-style-type: none;
+  padding-left: 10px;
+}
