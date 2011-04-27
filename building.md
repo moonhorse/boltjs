@@ -6,7 +6,7 @@ title: Building Bolt Packages
 Bolt includes a build system that allows you to generate single file packages for your css and js files. A bolt-build.json manifest tells the build script what files to include in your package.
 
 Here is an example bolt-build.json file:
-{% highlight javascript %}
+{% highlight json %}
 [
   {
     "provide_common_js_require_function": true
