@@ -1,5 +1,6 @@
 ---
 title: Building Bolt Packages
+layout: default
 ---
 
 <h1>Building Bolt Packages</h1>
