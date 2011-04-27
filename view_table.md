@@ -40,17 +40,13 @@ var tableDelegate = (function() {
 })();
 
 // configure a table with our delegate
-var table = new Table({
+var table = require('builder').build({
   height: '480px',
   width: '320px',
   style: {
     background: '#ccc'
-  },
-  delegate: tableDelegate
-});
-
-var example = document.getElementById('example');
-table.placeIn(example);
+  }
+}, tableDelegate).placeIn(document.getElementById('example'));
 table.refresh();
 {% endhighlight %}
 
