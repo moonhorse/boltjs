@@ -6,7 +6,7 @@ title: Building Bolt Packages
 Bolt includes a build system that allows you to generate single file packages for your css and js files. A bolt-build.json manifest tells the build script what files to include in your package.
 
 Here is an example bolt-build.json file:
-<code>
+{% highlight javascript %}
 [
   {
     "provide_common_js_require_function": true
@@ -24,7 +24,7 @@ Here is an example bolt-build.json file:
     multiple configs can be provided in a single file
   }
 ]
-</code>
+{% endhighlight %}
 
 <b>Key points</b>
 <ul>
@@ -34,6 +34,7 @@ Here is an example bolt-build.json file:
   <li>directory references in the bolt-build.json will cause all files to be recursively included within that directory.</li>
   <li>if a namespace is provided in the sources (e.g. ["module_name", "directory"]) files within that directory will be required as require('module_name/path/to/file/from/directory.js').</li>
   <li>any images in a directory you specify in sources will be copied into the package_target directory. This means your css files should be able to reference the images relatively as if they are alongside the css file.</li>
+</ul>
 
 <b>Running bolt-build</b><br/>
 Once you run npm-link on your bolt checkout, you'll have access to the bolt-build command. bolt-build takes a few options:
