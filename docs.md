@@ -1,5 +1,5 @@
 ---
-title: BoltJS Docs
+title: Introduction
 layout: default
 ---
 
