@@ -1,3 +1,10 @@
-body {
-  background: url(http://boltjs.org/images/BoltJS.png) top left no-repeat;
+.headerlogo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.headerlogo img {
+  width: 100px;
+  height: 100px;
 }
