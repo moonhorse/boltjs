@@ -1,6 +1,7 @@
 ---
 title: Views
 layout: default
+sectionview: true
 ---
 
 <h1>Views</h1>
