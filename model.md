@@ -38,3 +38,9 @@ Calling the <b>set</b> function will fire a <b>changed</b> event.  However, some
 
 {% endhighlight %}
 
+Getting a value from a model is simply, just call the <b>get</b> function, passing it the property name, e.g.
+
+{% highlight javascript %}
+  personModel.get('age');
+{% endhighlight %}
+
