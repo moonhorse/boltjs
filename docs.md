@@ -1,6 +1,6 @@
 ---
 title: BoltJS Docs
-layout: docstyle
+layout: default
 ---
 
 Introduction to BoltJS
