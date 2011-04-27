@@ -1,5 +1,6 @@
 ---
 title: Binding Models To Views
+layout: default
 section: model
 ---
 
