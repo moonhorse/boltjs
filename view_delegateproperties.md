@@ -128,7 +128,12 @@ var CarView = require('javelin/core').createClass({
   extend: require('container').Container,
 
   delegateProperties: {
+    // Map setWheels() to this.findRef('wheelView').setContent(),
+    // and getWheels() to this.findRef('wheelView').getContent()
     wheelView: [{alias: 'wheels', name: 'content'}],
+
+    // Map setDoors() to this.findRef('doorView').setContent(),
+    // and getDoors() to this.findRef('doorView').getContent()
     doorView: [{alias: 'doors', name: 'content'}]
   },
 
