@@ -1,6 +1,6 @@
 #header {
-  height: 71px;
-  padding-top: 20px;
+  height: 61px;
+  padding-top: 30px;
 }
 
 .headerlogo {
@@ -12,4 +12,10 @@
 .headerlogo img {
   width: 100px;
   height: 100px;
+}
+
+#pagenav {
+  position: absolute;
+  top: 100px;
+  left: 10px;
 }

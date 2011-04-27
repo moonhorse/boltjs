@@ -10,6 +10,23 @@
     <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <div id="nav">
+      <ul id="pagenav">
+        <li><a href="docs.html">Introduction</li>
+        <li><a href="view.html">Views</li>
+
+        {% if page.viewsection %}
+        <ul>
+          <li><a href="view_building.html">Building Views</a></li>
+          <li><a href="view_events.html">Events</a></li>
+        </ul>
+        {% endif %}
+        <li><a href="model.html">Models</li>
+        <li><a href="collection.html">Collections</li>
+        
+      </ul>
+
+    </div>
     <div id="main">
       <a href="/boltjs" class="headerlogo"><img src="http://boltjs.org/images/BoltJS.png" alt="github pages" /></a>
       <div id="header" class="basic" style="margin-bottom:20px">
