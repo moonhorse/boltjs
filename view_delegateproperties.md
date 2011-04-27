@@ -14,6 +14,8 @@ var CarView = require('javelin/core').createClass({
 
   name: 'CarView',
 
+  extend: require('container').Container,
+
   properties: {
     wheels: 4,
 
@@ -122,6 +124,8 @@ The above case is quite simple, <b>setClassName</b> is redirected to the <b>clas
 var CarView = require('javelin/core').createClass({
 
   name: 'CarView',
+
+  extend: require('container').Container,
 
   delegateProperties: {
     wheelView: [{alias: 'wheels', name: 'content'}],
