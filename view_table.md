@@ -1,7 +1,7 @@
 ---
 title: Table View
 layout: default
-sectionview: true
+section: view
 ---
 
 <h1>Table View</h1>
