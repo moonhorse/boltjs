@@ -27,7 +27,7 @@ Bolt makes it very simple to composite many different widgets together, lay them
 <ul>
   <li>A Builder which creates an infinitely deep hierarchy of child widgets using a JSON schema. </li>
   <li>Layout classes that position their child elements in either horizontal or vertical positions, complete with support for relative sizing of child elements</li>
-  <li>Combining the Javelin event delegation framework with the concept of view "owners".  Any view that creates child views automatically becomes the "owner" of this views, and can add event listeners to it's children during the build process. <li>
+  <li>Combining the Javelin event delegation framework with the concept of view "owners".  Any view that creates child views automatically becomes the "owner" of this views, and can add event listeners to it's children during the build process. </li>
   <li>A flexible data-binding framework with support for individual models and collections of models.</li>
 </ul>
 
