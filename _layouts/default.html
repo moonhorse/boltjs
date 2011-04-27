@@ -12,7 +12,6 @@
   <body>
     <div id="nav">
       <ul id="pagenav">
-        <li>{{ page.section }}</li>
         <li><a href="intro.html">Introduction</a></li>
         <li><a href="view.html">Views</a></li>
 
@@ -28,7 +27,7 @@
         {% endif %}
         <li><a href="model.html">Models</a></li>
         
-        {% if page.section == model %}
+        {% if page.section == 'model' %}
         <li>
           <ul>
             <li><a href="model_binding.html">Binding</a></li>
