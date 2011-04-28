@@ -98,9 +98,9 @@ layout: default
 
 <p>
   Rather than subclassing a <b>CollectionView</b> and overriding the <b>viewForModel</b>
-  method, pass in a JSON hash defining the mapping from the declared class of a
-  <b>Model</b> to the type of view to create.  Using this approach, the earlier example
-  can be changed to the code below.
+  method, pass in a JSON hash called <b>modelViewMapping</b> defining the mapping from the 
+  declared class of a <b>Model</b> to the type of view to create.  Using this approach, 
+  the earlier example can be changed to the code below.
 </p>
 
 {% highlight javascript %}
