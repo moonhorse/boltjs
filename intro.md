@@ -14,9 +14,6 @@ While it is the aim of the BoltJS project to support as many modern browsers as 
 
 Bolt is built on top of Javelin (http://javelinjs.com), from which it uses the event delegation and class declaration features, as well as various utility methods.  This ensures that Bolt does not duplicate code already present in the Facebook codebase, helping it stay lightweight and reuse patterns familiar to Facebook developers. 	
 
-<b>Highly Targeted</b>
-
-Bolt is highly targeted, supporting everything Buffy and Facebook need, and nothing it doesn't.  Bolt is not a complete JavaScript toolkit, and doesn't include every single utility function a developer will ever need.  Instead it is a view (or widget) compositing and data binding framework.
 
 <b>Modules and CommonJS</b>
 
