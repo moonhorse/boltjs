@@ -6,7 +6,9 @@ layout: default
 Introduction to BoltJS
 ======================
 
-BoltJS is a UI framework designed to be compact, fast and powerful.  It is written entirely in JavaScript and runs in the browser, needing no server backend.  While BoltJS can be used in a progressive enhancement approach, it is primarily designed for UIs that are built mostly, if not completely, in the browser.
+BoltJS is a UI framework designed by Facebook to be compact, fast and powerful.  It is written entirely in JavaScript and runs in the browser, needing no server backend.  While BoltJS can be used in a progressive enhancement approach, it is primarily designed for UIs that are built mostly, if not completely, in the browser.
+
+While it is the aim of the BoltJS project to support as many modern browsers as sensible, it is currently focused on supporting mobile WebKit browsers, with the intention of being the best possible development platform for mobile sites and HTML5 apps.
 
 <b>Built on Javelin</b>
 
