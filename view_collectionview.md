@@ -65,6 +65,8 @@ layout: default
         // Bind the model to the view so that any changes to its value will
         // be reflected in the view
         view.setBinding(model, [{property: 'value'}]);
+
+        return view;
       }
     }
   });
