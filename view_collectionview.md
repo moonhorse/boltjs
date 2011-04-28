@@ -87,3 +87,73 @@ layout: default
   coll.add(model2);
 
 {% endhighlight %}
+
+<h2>Declarative View Creation</h2>
+
+<p>
+  For cases where the <b>Collection</b> contains different classes of <b>Model</b>,
+  and each class of model can be represented by a particular type of view, a more simple
+  declarative method of using a <b>CollectionView</b> is possible.
+</p>
+
+<p>
+  Rather than subclassing a <b>CollectionView</b> and overriding the <b>viewForModel</b>
+  method, pass in a JSON hash defining the mapping from the declared class of a
+  <b>Model</b> to the type of view to create.  Using this approach, the earlier example
+  can be changed to the code below.
+</p>
+
+{% highlight javascript %}
+  var CollectionView = require('collection_view').CollectionView;
+  var Collection = require('collection').Collection;
+  var Model = require('model').Model;
+
+  // Declare two models, both containing'value'
+  // Assume that we have two models, UrlModel and EmailModel,
+  // both which extend Model
+  var model1 = new UrlModel({value: 'http://facebook.com'});
+  var model2 = new EmailModel({value: 'helpdesk@facebook.com'});
+
+  // Create an instance of our customized CollectionView
+  var collView = new CollectionView({
+    modelViewMapping: {
+      'UrlModel': {
+        // Create a 'CustomUrlInput' view when a UrlModel is encountered
+        view: 'CustomUrlInput',
+ 
+        // Bind the model to the view so that any changes to its value will
+        // be reflected in the view
+        bindingConfig: [{property: 'value'}]
+      },
+     'EmailModel': {
+        // Create a 'CustomUrlInput' view when a UrlModel is encountered
+        view: 'CustomEmailInput', 
+ 
+        // Bind the model to the view so that any changes to its value will
+        // be reflected in the view
+        bindingConfig: [{property: 'value'}]
+      }
+    }
+  });
+
+  // Insert it into the DOM
+  collView.placeIn(document.body);
+
+  // Get the default Collection from the CollectionView.  It is also possible
+  // to pass an existing Collection to the CollectionView
+  var coll = collView.getCollection();
+
+  // Add the two models to the Collection.  This will cause two new Views to be
+  // inserted into the InputCollectionView
+  coll.add(model1);
+  coll.add(model2);
+
+{% endhighlight %}
+
+<p>
+  Deciding which approach to use depends on the situation.  If all the Models in the Collection
+  are of the same type, and deciding which view to create, and how to create it depends on some custom
+  logic, then use the programmatic approach.  If the Models in your Collection are of different classes,
+  and there is a simple one-to-one mapping between the Model class and the type of View to create,
+  then the declarative approach is more suitable
+</p>
