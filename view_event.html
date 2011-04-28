@@ -15,11 +15,31 @@ layout: default
 </p>
 
 {% highlight javascript %}
-  require('views/Button');
+  var Button = require('views/Button').Button;
   var myButton = new Button();
   myButton.listen('mouseover', function(event) {
     console.log('mouseover event');
   });
 {% endhighlight %}
 
+<h2>Using the Builder</h2>
 
+<p>
+  It is also possible to attach events when using the <a href="view_building.html">Builder</a>.  Any property set on a view passed the Builder that starts with <b>on</b> is assumed to be an event and is listened to.  The example below shows a simple version of this in use.  Note that unlike when calling the <b>listen</b> method directly, the event name begins with <b>on</b>.
+</p>
+
+{% highlight javascript %}
+  var Button = require('views/Button').Button;
+  var myButton = builder.build({
+    view: Button,
+    onmouseover: function(event) {
+      console.log('mouseover event');
+    }
+  });
+{% endhighlight %}
+
+<h2>Events in the Owner</h2>
+
+<p>
+
+</p>
