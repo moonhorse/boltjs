@@ -126,7 +126,7 @@ layout: default
         bindingConfig: [{property: 'value'}]
       },
      'EmailModel': {
-        // Create a 'CustomUrlInput' view when a UrlModel is encountered
+        // Create a 'CustomEmailInput' view when an EmailModel is encountered
         view: 'CustomEmailInput', 
  
         // Bind the model to the view so that any changes to its value will
