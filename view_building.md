@@ -153,7 +153,7 @@ layout: default
 
 <h3>Implicit Encapsulation</h3>
 <p>
-  The Owner concept enforces encapsulation of views.  If one view creates another view inside it, only it has access to that child view.  There is no global accessor, and no way of querying for it.  Neither is there any mapping from a DOM node back to the owner view, such as an ID that could be used to look up some global registry.
+  The Owner concept enforces encapsulation of views.  If one view creates another view inside it, only it has access to that child view.  There is no global accessor, and no way of querying for it.  Neither is there any mapping from a DOM node back to the view which created it, such as an ID that could be used to look up some global registry.
 </p>
 
 <p>
