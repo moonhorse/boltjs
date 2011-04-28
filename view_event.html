@@ -1,0 +1,25 @@
+---
+title: Event Handling
+section: view
+layout: default
+---
+
+<h1>Event Handling</a>
+
+<p>
+  All Bolt <b>View</b>s have a <b>listen</b> method which can be used to listen for both DOM and custom events.  Simply pass the event name and the function callback.  The callback can be either a function or a string, in which case it is the name of a function on the <b>View</b>s owner.  (For more information on the Owner concept, see <a href="view_building.html">Building Views</a>.
+</p>
+
+<p>
+  The example below shows the case where the listen function is passed a function.  Note that the event name does not contain 'on', this is important.  The <b>event</b> parameter passed to the callback is a <a href="http://javelinjs.com">Javelin</a> event, not a standard DOM event.  This provides a number of extra functions that you can see in the <a href="http://www.phabricator.com/docs/javelin/class/JX.Event.html">Javelin Docs</a>.  To get the original DOM event, call <b>event.getRawEvent()</b>.
+</p>
+
+{% highlight javascript %}
+  require('views/Button');
+  var myButton = new Button();
+  myButton.listen('mouseover', function(event) {
+    console.log('mouseover event');
+  });
+{% endhighlight %}
+
+
