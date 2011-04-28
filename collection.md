@@ -23,6 +23,7 @@ layout: default
 
 {% highlight javascript %}
   var Collection = require('collection').Collection;
+  var Model = require('model').Model;
   var c = new Collection();
 
   c.listen('modelAdded', function(obj) {
@@ -32,6 +33,9 @@ layout: default
   c.listen('updated', function(obj) {
     console.log('This collection was updated', obj.collection);
   });
+
+  var m = new Model({name: 'Shane', age: 32});
+  c.add(m);
 {% endhighlight %}
 
 <p>
