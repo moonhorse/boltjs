@@ -123,7 +123,7 @@ layout: default
 
         // Check which button was clicked, and show/hide the
         // the panes  
-        if (value == 'Pane 1) {
+        if (value == 'Pane 1') {
           this.findRef('pane1').setStyle({display: ''});
           this.findRef('pane2').setStyle({display: 'none'});
         } else {
@@ -134,6 +134,8 @@ layout: default
     }
   });
 
+  // Instantiate a new instance of a MyPaneLayout view
+  // and put it in the document body
   require('builder').build({
     view: 'MyPaneLayout'
   }).placeIn(document.body);
