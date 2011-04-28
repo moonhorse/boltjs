@@ -32,6 +32,11 @@ require('javelin/core').createClass({
     // init type stuff
   },
 
+  properties: {
+    age: 18, // Creates setAge and getAge functions
+    name: '' // Creates setName and getName functions
+  },
+
   statics: {
     COMMON_VAR: 1
   },
@@ -39,7 +44,7 @@ require('javelin/core').createClass({
   members: {
     render: function(options) {
       this.setLayout({
-        view: 'MyView'
+        content: 'Hello World!'
       });
     },
 

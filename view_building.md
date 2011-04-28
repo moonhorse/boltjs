@@ -140,8 +140,56 @@ layout: default
     view: 'MyPaneLayout'
   }).placeIn(document.body);
 
-
-
-  
-
 {% endhighlight %}
+
+<h2>The Owner Concept</h2>
+<p>
+  In he example above, note how the <b>onSelectPane</b> function is bound to the action of the two Button views.  It is simply passed as a string, rather than passing the function itself.
+</p>
+
+<p>
+  This demonstrates the concept of a view Owner.  The Owner of a view is the object that created it.  Calling the <b>setLayout</b> function in a view automatically sets that view as the Owner of all subviews, all the way down to the most deeply nested view.
+</p>
+
+<h3>Implicit Encapsulation</h3>
+<p>
+  The Owner concept enforces encapsulation of views.  If one view creates another view inside it, only it has access to that child view.  There is no global accessor, and no way of querying for it.  Neither is there any mapping from a DOM node back to the owner view, such as an ID that could be used to look up some global registry.
+</p>
+
+<p>
+  If the owner view wishes to allow outside entities to manipulate the contents or behavior of an inner child view, it must create public methods to allow this.  This leads to a very explicit API, where all points of control are known for all views.
+</p>
+
+<h3>Using Child Views</h3>
+<p>
+  To access a child view, give it a <b>ref</b> string parameter.  A <b>ref</b> is like an ID, but whereas an ID is also a DOM node attribute, a <b>ref</b> is simply an internal lookup key for that view.  in the example above, you can see that the two panes being switched have been given <b>ref: 'pane1'</b> and <b>ref: 'pane2'</b>.  A <b>ref</b> can be used to access a view at any depth of the hierarchy, not just at the root, and should only be used by the owner view internally. 
+</p>
+
+<p>
+  Note: if a view is not given a <b>ref</b> attribute, it can not be accessed directly.  Often this is fine, as a view might just be a static visual object, or something that fires UI events like clicks and mouse overs.
+</p>
+
+<p>
+ Once a view has been given a <b>ref</b>, it can be accessed using the <b>this.findRef</b> function.  In the example above you can see it using <b>this.findRef('pane1')</b> to find the first pane and set it's style. 
+</p>
+
+<p>
+  The <b>findRef</b> function should only ever be used internally by the owner view.  You should never call <b>findRef</b> on another view.  For example:
+</p>
+
+{% highlight javascript %}
+  this.findRef('myChildView').findRef('SomeInnerView').setContent('I am naughty');
+{% endhighlight %}
+
+<p>
+  is very bad practice and breaks the encapsulation of views.  So don't do it.  Instead, <b>myChildView</b> should provide a public method for updating <b>SomeInnerView</b>.
+</p>
+
+
+
+
+
+
+
+
+
