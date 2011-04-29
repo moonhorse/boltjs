@@ -93,5 +93,7 @@ layout: default
 </p>
 
 <p>
-  Now any JavaScript or CSS files that you place in the <b>src</b> folder of your app will be built into a single file.
+  Now any JavaScript or CSS files that you place in the <b>src</b> folder of your app will be built into a single file.  See <a href="building.html">Building Bolt</a> for more details on how to build an app.
 </p>
+
+
