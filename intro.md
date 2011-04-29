@@ -30,3 +30,4 @@ Bolt makes it very simple to composite many different widgets together, lay them
   <li>A flexible <a href="model_binding.html">data-binding framework</a> with support for individual models and <a href="collection.html">collections</a> of models.</li>
 </ul>
 
+

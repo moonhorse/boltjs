@@ -44,32 +44,3 @@ Once you run npm-link on your bolt checkout, you'll have access to the bolt-buil
   <li> -c : specify an alternate config file other than the default bolt-build.json</li>
   <li> -m: minify the output using uglify.js. package files will be names as package_name.min.js package_name.min.css</li>
 </ul>
-
-<h2>Bolt Core</h2>
-
-<b>Views</b>
-
-<ul>
-  <li>View: base level view class that provides life cycle, configuration, data binding, and dom access</li>
-  <li>Container: base level view class that can contain other views and manage them as a set </li>
-  <li>CollectionView: Container view that can be data-bound to a Collection</li>
-</ul>
-
-<b>Models</b>
-<ul>
-  <li>Model: Base level object with observable properties. These should be sub-classed to model the domain of your application</li>
-  <li>Collection: Manage a set of models and provide notifications of membership changes.</li>
-</ul>
-
-<b>Controllers</b>
-<ul>
-  <li>Not yet defined in Bolt. Should be lightweight and provide the facility of connecting models and views prior to data-binding.</li>
-</ul>
-
-<b>Utilities</b>
-<ul>
-  <li>Javelin: DOM, Ajax, Class Inheritance, Events (data/DOM) </li>
-  <li>Underscore: iterators</li>
-  <li>Build System: nodejs script provides CommonJS module api and packages resources into single files</li>
-</ul>
-
