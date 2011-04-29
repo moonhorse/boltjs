@@ -41,5 +41,39 @@ layout: default
 <h2>Events in the Owner</h2>
 
 <p>
-
+  Bolt provides a clean way of organizing event listeners when composing hierarchies of views.  Rather than pass an actual function as a listener, instead pass the string name of a function in that views <b>owner</b> (see <a href="view_building.html">Building Views</a> for an explanation of the owner concept).  This makes for a more readable view hierarchy declaration, as you don't have to pass actual functions, bind them to the view etc.
 </p>
+
+{% highlight javascript %}
+var Container = require('container').Container;
+
+require('javelin/core').createClass({
+  name : 'MyOwnerContainer',
+
+  extend: Container,
+
+  members: {
+    render: function() {
+      this.setLayout({
+        content: "Hello World!",
+        ref: "myInnerView",
+
+        // Add two listeners, passing the names of the functions that will handle their events
+        ontouchstart: "handleTouchStart",
+        ontouchend: "handleTouchEnd"
+      });
+    },
+
+    // Handler for the touch start event
+    handleTouchStart: function(event) {
+      this.refs.myInnerView.setContent("That tickles!!");
+    },
+
+    // Handler for the touch end event
+    handleTouchEnd: function(event) {
+      this.refs.myInnerView.setContent("Touch me again and I'll .....");
+    }
+  }
+});
+
+{% endhighlight %}
