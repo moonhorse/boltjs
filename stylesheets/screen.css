@@ -45,6 +45,6 @@
   padding-left: 10px;
 }
 
-.nobullet {
+.nobullet, .nobullet li {
   list-style-type: none;
 }
