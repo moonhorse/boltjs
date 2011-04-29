@@ -50,5 +50,48 @@ layout: default
 <h2>Setting Up An Application</h2>
 
 <p>
-  
+  To build a standalone HTML5 app, first create a folder, let's call it <b>MyApp</b>, and create a file called <b>bolt-build.json</b>.  This will be used to concatenate all of your source files into one JavaScript file and one CSS file.  It also provides the CommonJS wrappers necessary to allow just-in-time execution of your code, which speeds up app startup time.  
+</p>
+
+<p>
+  Create a folder called <b>src</b>, which is where you'll put your code.
+</p>
+
+<p>
+  Open bolt-build.json, and add the following:
+</p>
+
+{% highlight javascript %}
+  {
+    "sources": [
+      "src"
+    ],
+    "package_target": "pkg",
+    "package_name": "myapp"
+  }
+{% endhighlight %}
+
+<p>
+  Go to where you have Bolt downloaded and type <b>npm link</b>.  This uses the Node NPM tool to set up the Bolt build script to be used from anywhere
+</p>
+
+<p>
+  Go back to your new apps root folder.  Type <b>bolt-build</b>.  This builds your application, creating the files
+</p>
+
+<ul>
+  <li>pkg/myapp.js</li>
+  <li>pkg/myapp.css</li>
+</ul>
+
+<p>
+  These two files should be included in your index.html file for the app, along with bolt.js and bolt.css.
+</p>
+
+<p>
+  As it would be tiresome to have to run a build step every time you change any JavaScript or CSS file, the Bolt build script has a <b>watch</b> mode, which looks for changes to any files and rebuilds your app code.  To use this, type <b>bolt-build -w</b> in the root folder of your app.
+</p>
+
+<p>
+  Now any JavaScript or CSS files that you place in the <b>src</b> folder of your app will be built into a single file.
 </p>
