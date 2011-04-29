@@ -85,8 +85,33 @@ layout: default
 </ul>
 
 <p>
-  These two files should be included in your index.html file for the app, along with bolt.js and bolt.css.
+  These two files should be included in your index.html file for the app, along with bolt.js and bolt.css.  One common layout for an app would be:
 </p>
+
+<ul>
+  <li>MyApp</li<
+  <li>
+    <ul>
+      <li>index.html</li>
+      <li>bolt-build.json</li>
+      <li>src</li>
+      <li>
+        <ul>
+          <li>someCode.js</li>
+          <li>someOtherCode.js</li>
+          <li>someStyles.css</li>
+        </ul>
+      </li>
+      <li>pkg</li>
+      <li>
+        <ul>
+          <li>myapp.js (generated file)</li>
+          <li>myapp.css (generated file)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <p>
   As it would be tiresome to have to run a build step every time you change any JavaScript or CSS file, the Bolt build script has a <b>watch</b> mode, which looks for changes to any files and rebuilds your app code.  To use this, type <b>bolt-build -w</b> in the root folder of your app.
