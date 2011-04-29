@@ -89,7 +89,7 @@ layout: default
 </p>
 
 <ul>
-  <li>MyApp</li<
+  <li>MyApp</li>
   <li>
     <ul>
       <li>index.html</li>
