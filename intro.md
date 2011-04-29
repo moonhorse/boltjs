@@ -24,9 +24,9 @@ Bolt modules are defined using a popular standard called CommonJS, first popular
 
 Bolt makes it very simple to composite many different widgets together, lay them out in a reliable fashion, listen to their events and synchronize their data models.  This is achieved using
 <ul>
-  <li>A Builder which creates an infinitely deep hierarchy of child widgets using a JSON schema. </li>
-  <li>Layout classes that position their child elements in either horizontal or vertical positions, complete with support for relative sizing of child elements</li>
-  <li>Combining the Javelin event delegation framework with the concept of view "owners".  Any view that creates child views automatically becomes the "owner" of this views, and can add event listeners to it's children during the build process. </li>
-  <li>A flexible data-binding framework with support for individual models and collections of models.</li>
+  <li>A <a href="view_building.html">Builder</a> which creates an infinitely deep hierarchy of child widgets using a JSON schema. </li>
+  <li><a href="view_layouts.html">Layout classes</a> that position their child elements in either horizontal or vertical positions, complete with support for relative sizing of child elements</li>
+  <li>Combining the Javelin event delegation framework with the concept of view <a href="view_building.html">"owners"</a>.  Any view that creates child views automatically becomes the "owner" of this views, and can add event listeners to it's children during the build process. </li>
+  <li>A flexible <a href="model_binding.html">data-binding framework</a> with support for individual models and <a href="collection.html">collections</a> of models.</li>
 </ul>
 
