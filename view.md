@@ -21,6 +21,8 @@ The various parts of a view, in brief, are
 
 To create a new view class, use the install method, e.g.
 {% highlight javascript %}
+var Container = require('container').Container;
+
 require('javelin/core').createClass({
 
   name: 'MyViewName',
@@ -51,7 +53,7 @@ require('javelin/core').createClass({
     handleTouchEvent: function(evt) {
 
     }
-    ...
+    // More functions
   }
 });
 {% endhighlight %}
