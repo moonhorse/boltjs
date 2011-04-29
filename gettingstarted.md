@@ -90,12 +90,12 @@ layout: default
 
 <ul>
   <li>MyApp</li>
-  <li>
+  <li class="nobullet">
     <ul>
       <li>index.html</li>
       <li>bolt-build.json</li>
       <li>src</li>
-      <li>
+      <li class="nobullet">
         <ul>
           <li>someCode.js</li>
           <li>someOtherCode.js</li>
@@ -103,7 +103,7 @@ layout: default
         </ul>
       </li>
       <li>pkg</li>
-      <li>
+      <li class="nobullet">
         <ul>
           <li>myapp.js (generated file)</li>
           <li>myapp.css (generated file)</li>
