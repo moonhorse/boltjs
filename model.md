@@ -30,7 +30,7 @@ To update a models value, simply call the <b>set</b> function, passing it both t
 Calling the <b>set</b> function will fire a <b>changed</b> event.  However, sometimes is is necessary to update many properties in a single transaction, and the <b>changed</b> event shouldn't be fired until all have been set.  In this case, use the <b>setAll</b> function, passing it a JSON object with name value pairs to set e.g.
 
 {% highlight javascript %}
-  personModel.set({
+  personModel.setAll({
     name: 'Mary',
     age: 34,
     nationality: 'Swedish'
