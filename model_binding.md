@@ -14,8 +14,17 @@ section: model
 </ul>
 
 {% highlight javascript %}
+
+var core = require('javelin/core');
+var Model = require('model').Model;
+var View = require('view').View;
+
 // declare a model with some properties
-Model.install('Thing', {
+core.createClass({
+  name: 'Thing',
+
+  extend: Model,
+
   properties: {
     color:'#000000',
     background:'#00FFFF'
@@ -25,7 +34,12 @@ Model.install('Thing', {
 // declare a view with some properties 
 // and create appropriate setters that respond to changes 
 // in those properties 
-View.install('ThingView', {
+core.createClass({
+
+  name: 'ThingView',
+
+  extend: View,
+
   construct: function(){
     View.call(this);
   },
